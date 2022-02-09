@@ -11,6 +11,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
+		// sort by name
 		Set<User> uset=new TreeSet<User>(new SortByName());
 		
 		User u1=new User(1, "akshay", "pune");
@@ -25,6 +26,7 @@ public class Test {
 		
 		System.out.println(uset);
 		
+		// sort by uid
 		Set<User> uset1=new TreeSet<User>(new SortByUid());
 		
 		User us1=new User(11, "mandar", "pune");
@@ -38,6 +40,21 @@ public class Test {
 		uset1.add(us4);
 
 		System.out.println(uset1);
+		
+		// sort by name
+		Set<User> uset2=new TreeSet<User>(new SortByUid());
+		
+		User user1=new User(111, "ayush", "pune");
+		User user2=new User(412, "jeet", "chennai");
+		User user3=new User(332, "eshwar", "goa");
+		User user4=new User(622, "laxman", "mumbai");
+		
+		uset2.add(user1);
+		uset2.add(user2);
+		uset2.add(user3);
+		uset2.add(user4);
+
+		System.out.println(uset2);
 	}
 
 }
