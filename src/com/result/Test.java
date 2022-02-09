@@ -5,6 +5,7 @@ import java.util.TreeSet;
 
 import com.model.User;
 import com.sorting.SortByName;
+import com.sorting.SortByUid;
 
 public class Test {
 
@@ -23,7 +24,20 @@ public class Test {
 		uset.add(u4);
 		
 		System.out.println(uset);
+		
+		Set<User> uset1=new TreeSet<User>(new SortByUid());
+		
+		User us1=new User(11, "mandar", "pune");
+		User us2=new User(41, "ovee", "chennai");
+		User us3=new User(32, "dinesh", "goa");
+		User us4=new User(33, "hanumant", "mumbai");
+		
+		uset1.add(us1);
+		uset1.add(us2);
+		uset1.add(us3);
+		uset1.add(us4);
 
+		System.out.println(uset1);
 	}
 
 }
